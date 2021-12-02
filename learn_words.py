@@ -1,6 +1,7 @@
 from os import PathLike
 import random
 import os 
+import time 
 
 def borrarPantasha():
     if os.name == 'posix':
@@ -16,33 +17,39 @@ def get_word_user():
 
 def run():
     borrarPantasha()
-    english_words = []
-    spanish_words = []
-    num_eng_words = 0
-    num_esp_words = 0
+    while True:
+        english_words = []
+        spanish_words = []
+        num_eng_words = 0
+        num_esp_words = 0
 
-    with open('./archivos/english_words.txt', 'r', encoding='utf-8') as f:
-        for i in f:
-            english_words.append(i.replace('\n', ''))
-            num_eng_words += 1
-    with open('./archivos/spanish_words.txt', 'r', encoding='utf-8') as l:
-        for i in l:
-            spanish_words.append(i.replace('\n', ''))
-            num_esp_words += 1
+        with open('./archivos/english_words.txt', 'r', encoding='utf-8') as f:
+            for i in f:
+                english_words.append(i.replace('\n', ''))
+                num_eng_words += 1
+        with open('./archivos/spanish_words.txt', 'r', encoding='utf-8') as l:
+            for i in l:
+                spanish_words.append(i.replace('\n', ''))
+                num_esp_words += 1
 
-    random_num = random.randint(0,num_eng_words - 1)
+        random_num = random.randint(0,num_eng_words - 1)
 
-    print(english_words[random_num])
-    palabra = get_word_user()
+        print(english_words[random_num])
+        palabra = get_word_user()
 
-    if palabra == spanish_words[random_num]:
-        print('Sí!')
+        if palabra == spanish_words[random_num]:
+            print('Sí!')
+        else:
+            print('No')
+        
+        time.sleep(2)
+        borrarPantasha()
 
 
 
-    # print(spanish_words[random_num]) 
-    # palabras y numero que nos arroja 
-    # print(str(random_num))
+        # print(spanish_words[random_num]) 
+        # palabras y numero que nos arroja 
+        # print(str(random_num))
 
 
 
