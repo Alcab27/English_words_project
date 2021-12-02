@@ -1,5 +1,5 @@
 def run():
-    pass 
+    with open('')
 
 
 if __name__ == '__main__':
