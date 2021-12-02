@@ -4,7 +4,7 @@ each
 born
 river
 meals
-borrowpedir
+borrow
 wind
 weather
 kinds
