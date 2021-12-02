@@ -2,6 +2,12 @@ from os import PathLike
 import random
 import os 
 
+def borrarPantasha():
+    if os.name == 'posix':
+        os.system('clear')
+    elif os.name == 'ce' or os.name == 'nt' or os.name == 'dos':
+        os.system('cls')
+
 def get_word_user():
     word_user = input('Ingrese la palabra: ')
     # print(word_user)
@@ -9,6 +15,7 @@ def get_word_user():
 
 
 def run():
+    borrarPantasha()
     english_words = []
     spanish_words = []
     num_eng_words = 0
