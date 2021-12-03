@@ -8,9 +8,9 @@ escuchar
 oler
 gusto/saber/probar
 sésped
-conrespectoa
+con respecto a
 ocio
-salirconamigos
+salir con amigos
 bucear
 relajarse
 montando
@@ -24,18 +24,18 @@ pimientos
 estante
 pepinillos
 aguacates
-tiendadecomestibles
-enelextranjero
-pisodearriba
-encualquiersitio
+tienda de comestibles
+en el extranjero
+piso de arriba
+en cualquier sitio
 lejos
-fuerade
+fuera de
 abajo
-algunlado
+algún lado
 sobre
 hacia
 mediante
-atravésde
+através de
 debajo
 valla
 incluso
@@ -44,7 +44,7 @@ debe
 mejorar
 mesada
 gastado
-damadehonor
+dama dehonor
 iglesia
 llevar
 sacar
