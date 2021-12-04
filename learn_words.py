@@ -31,28 +31,36 @@ def run():
             spanish_words.append(i.replace('\n', ''))
             num_esp_words += 1
     while True:
-        random_num = random.randint(0,num_eng_words - 1)
+        try:
+             
+            random_num = random.randint(0,num_eng_words - 1)
 
-        print(english_words[random_num])
-        palabra = get_word_user()
-        
+            print(english_words[random_num])
+            palabra = get_word_user()
 
-        if palabra == spanish_words[random_num]:
-            print('Sí!')
-            spanish_words.pop(random_num)
-            english_words.pop(random_num)
-        else:
-            print('No')
-            print(spanish_words[random_num]) 
-
-
-        time.sleep(2)
-        borrarPantasha()
+            if palabra == spanish_words[random_num]:
+                print('Sí!')
+                spanish_words.pop(random_num)
+                english_words.pop(random_num)
+                num_eng_words -= 1
+            else:
+                print('No')
+                print(spanish_words[random_num]) 
 
 
+            time.sleep(2)
+            borrarPantasha()
+        except IndexError as f:
+            # print('No se puele')
+            continue
+        if num_eng_words == 0:
+            print('Acabamooos!')
+            time.sleep(2)
+            borrarPantasha()
+            break
 
-        # palabras y numero que nos arroja 
-        # print(str(random_num))
+            # palabras y numero que nos arroja 
+            # print(str(random_num))
 
 
 
