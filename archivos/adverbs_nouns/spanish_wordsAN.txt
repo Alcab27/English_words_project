@@ -6,7 +6,7 @@ tocar
 visión
 escuchar
 oler
-gusto/saber/probar
+probar
 sésped
 con respecto a
 ocio
@@ -19,7 +19,7 @@ declaraciones
 después
 manteca
 piña
-cebolla
+cebollas
 pimientos
 estante
 pepinillos
@@ -30,7 +30,7 @@ piso de arriba
 en cualquier sitio
 lejos
 fuera de
-abajo
+piso de abajo
 algún lado
 sobre
 hacia
@@ -44,7 +44,7 @@ debe
 mejorar
 mesada
 gastado
-dama dehonor
+dama de honor
 iglesia
 llevar
 sacar

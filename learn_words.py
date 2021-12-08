@@ -1,7 +1,7 @@
-from os import PathLike
-import random
 import os 
-import time 
+import random
+import time
+from typing import Counter 
 
 def borrarPantasha():
     if os.name == 'posix':
@@ -14,13 +14,14 @@ def get_word_user():
     # print(word_user)
     return word_user
 
-
 def run():
     borrarPantasha()
     english_words = []
     spanish_words = []
+    palabras_erradas = []
     num_eng_words = 0
     num_esp_words = 0
+    cont = 0 
 
     with open('./archivos/totests.txt', 'r', encoding='utf-8') as f:
         for i in f:
@@ -46,22 +47,28 @@ def run():
             else:
                 print('No')
                 print(spanish_words[random_num]) 
+                palabras_erradas.append(english_words[random_num])
+                cont += 1
+                # si no es correcta, crear una variable que guarde la palabra 
+                # y la muestre al final del programa. Mostrará que palabras fueron 
+                # erradas y cuantas veces se erraron
 
 
-            time.sleep(2)
+            time.sleep(0.5)
             borrarPantasha()
         except IndexError as f:
             # print('No se puele')
             continue
         if num_eng_words == 0:
             print('Acabamooos!')
-            time.sleep(2)
+            print('Erraste en las siguientes palabras: ')
+            for i in palabras_erradas:
+                print(i, palabras_erradas.count(i))
+                pass
+
+            time.sleep(5)
             borrarPantasha()
             break
-
-            # palabras y numero que nos arroja 
-            # print(str(random_num))
-
 
 
 if __name__ == '__main__':
