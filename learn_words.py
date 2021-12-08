@@ -22,11 +22,11 @@ def run():
     num_eng_words = 0
     num_esp_words = 0
 
-    with open('./archivos/totests.txt', 'r', encoding='utf-8') as f:
+    with open('./archivos/superlatives_adverbs/english_wordsSA.txt', 'r', encoding='utf-8') as f:
         for i in f:
             english_words.append(i.replace('\n', ''))
             num_eng_words += 1
-    with open('./archivos/papruebas.txt', 'r', encoding='utf-8') as l:
+    with open('./archivos/superlatives_adverbs/spanish_wordsSA.txt', 'r', encoding='utf-8') as l:
         for i in l:
             spanish_words.append(i.replace('\n', ''))
             num_esp_words += 1
