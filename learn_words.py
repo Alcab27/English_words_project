@@ -21,13 +21,13 @@ def run():
     palabras_erradas = []
     num_eng_words = 0
     num_esp_words = 0
-    cont = 0 
+    FASHAMOS = bool
 
-    with open('./archivos/totests.txt', 'r', encoding='utf-8') as f:
+    with open('./archivos/adverbs_nouns/english_wordsAN.txt', 'r', encoding='utf-8') as f:
         for i in f:
             english_words.append(i.replace('\n', ''))
             num_eng_words += 1
-    with open('./archivos/papruebas.txt', 'r', encoding='utf-8') as l:
+    with open('./archivos/adverbs_nouns/spanish_wordsAN.txt', 'r', encoding='utf-8') as l:
         for i in l:
             spanish_words.append(i.replace('\n', ''))
             num_esp_words += 1
@@ -48,10 +48,7 @@ def run():
                 print('No')
                 print(spanish_words[random_num]) 
                 palabras_erradas.append(english_words[random_num])
-                cont += 1
-                # si no es correcta, crear una variable que guarde la palabra 
-                # y la muestre al final del programa. Mostrará que palabras fueron 
-                # erradas y cuantas veces se erraron
+                FASHAMOS = True
 
 
             time.sleep(0.5)
@@ -61,12 +58,18 @@ def run():
             continue
         if num_eng_words == 0:
             print('Acabamooos!')
-            print('Erraste en las siguientes palabras: ')
-            for i in palabras_erradas:
-                print(i, palabras_erradas.count(i))
-                pass
+            if FASHAMOS == True:
+                print('Erraste en las siguientes palabras: ')
+                for i in palabras_erradas:
+                    err = int(palabras_erradas.count(i))
+                    print(i, palabras_erradas.count(i))
+                    if palabras_erradas.count(i) > 1:
+                        for l in range(0, err):
+                            palabras_erradas.remove(i)
+            else:
+                print('Felicidades!! No erraste ninguna palabra')
 
-            time.sleep(5)
+            time.sleep(10)
             borrarPantasha()
             break
 
