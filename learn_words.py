@@ -1,7 +1,6 @@
 import os 
 import random
 import time
-from typing import Counter 
 
 def borrarPantasha():
     if os.name == 'posix':
@@ -49,7 +48,6 @@ def run():
                 print(spanish_words[random_num]) 
                 palabras_erradas.append(english_words[random_num])
                 FASHAMOS = True
-
 
             time.sleep(0.5)
             borrarPantasha()
