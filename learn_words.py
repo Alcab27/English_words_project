@@ -23,13 +23,13 @@ def run():
     num_esp_words = 0
     FASHAMOS = bool
 
-    with open('./archivos/hours_rqusts/english_wordsHR.txt', 'r', encoding='utf-8') as f:
-    # with open('./archivos/erradas_eng.txt', 'r', encoding='utf-8') as f:
+    # with open('./archivos/superlatives_adverbs/english_wordsSA.txt', 'r', encoding='utf-8') as f:
+    with open('./archivos/erradas_eng.txt', 'r', encoding='utf-8') as f:
         for i in f:
             english_words.append(i.replace('\n', ''))
             num_eng_words += 1
-    with open('./archivos/hours_rqusts/spanish_wordsHR.txt', 'r', encoding='utf-8') as l:
-    # with open('./archivos/erradas_esp.txt', 'r', encoding='utf-8') as l:
+    # with open('./archivos/superlatives_adverbs/spanish_wordsSA.txt', 'r', encoding='utf-8') as l:
+    with open('./archivos/erradas_esp.txt', 'r', encoding='utf-8') as l:
         for i in l:
             spanish_words.append(i.replace('\n', ''))
             num_esp_words += 1
